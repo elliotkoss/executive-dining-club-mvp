@@ -41,40 +41,20 @@
             <div class="masthead-content text-white">
                 <div class="container-fluid px-4 px-lg-0">
                     <h1 class="fst-italic lh-1 mb-4">Executive Dining Club</h1>
-                    <p class="mb-5">Every month, we organize a dinner in Austin, TX for business leaders to network, talk shop, and share knowledge. Join us!</p>
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <!-- Email address input-->
+                    <p class="mb-5">Every month, we organize a dinner in Austin, TX for business leaders to network, talk shop, and share knowledge. Join us!</p>                    
+                                        
+                    <form id="contactForm" method="POST" action="https://script.google.com/macros/s/AKfycbxdMr3g8KCF-TZI6lpcWqHwXvQm52FC6YrINkTyxxD_c7GPnUWJHolwLYGCjQ-ZxCKJXQ/exec">
+                        <!-- 
+                            Email address input
+                            https://github.com/levinunnink/html-form-to-google-sheet
+                        -->
                         <div class="row input-group-newsletter">
-                            <div class="col"><input class="form-control" id="email" type="email" placeholder="Email" aria-label="Email" data-sb-validations="required,email" /></div>
-                            <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Submit</button></div>
-                        </div>
-                        <div class="invalid-feedback mt-2" data-sb-feedback="email:required">An email is required.</div>
-                        <div class="invalid-feedback mt-2" data-sb-feedback="email:email">Email is not valid.</div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3 mt-2">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br />
-                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
-                    </form>
+                            <div class="col"><input class="form-control" name="Email" type="email" placeholder="Email" aria-label="Email" /></div>
+                            <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Submit</button></div>
+                        </div>                            
+                    </form>                    
+
+                    <p id="submitInfo" style="display:none;">Submitting email...</p>                    
                 </div>
             </div>
         </div>
@@ -100,3 +80,24 @@
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
+
+<script>
+    window.addEventListener("load", function() {
+        const form = document.getElementById('contactForm');
+        form.addEventListener("submit", function(e) {        
+            form.style.display='none';
+            document.getElementById('submitInfo').style.display='block';
+            e.preventDefault();
+            const data = new FormData(form);
+            const action = e.target.action;
+            fetch(action, {
+            method: 'POST',
+            body: data,
+            })
+            .then(() => {
+            //alert("Success!");
+            location.href = 'confirmation.html';
+            })
+        });
+    });
+</script>
