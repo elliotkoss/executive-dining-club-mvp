@@ -10871,7 +10871,7 @@ img.bg-image {
 
 @media (pointer: coarse) and (hover: none) {
   body {
-    background: url("../assets/img/dinner-image-sm.jpeg") #6495ED no-repeat center center scroll;
+    background: url("../assets/img/dinner-image-sm.webp") #6495ED no-repeat center center scroll;
     background-size: cover;
   }
   body video {
