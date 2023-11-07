@@ -69,42 +69,16 @@
                 <div class="container-fluid px-4 px-lg-0">
                     <h1 class="fst-italic lh-1 mb-4">1 Minute Survey</h1>
                     
+                    <!-- 
+                        
+                        QUESTION 1 
+                    
+                    -->
                     <div id="input1">
                         <p class="mb-3">1 of 6</p>
                         <p class="mb-3">Do you want to join another dinner?</p> 
                     </div>
 
-                    <div id="input2" style="display:none;">
-                        <p class="mb-3">2 of 6</p>
-                        <p class="mb-3">Should we keep El Alma in our restaurant rotation?</p> 
-                    </div>
-
-                    <div id="input3" style="display:none;">
-                        <p class="mb-3">3 of 6</p>
-                        <p class="mb-3">Who is one person you'd want to see at another dinner?</p> 
-                    </div>
-
-                    <div id="input4" style="display:none;">
-                        <p class="mb-3">4 of 6</p>
-                        <p class="mb-3">What's one restaurant we should add to our rotation?</p> 
-                    </div>
-
-                    <div id="input5" style="display:none;">
-                        <p class="mb-3">5 of 6</p>
-                        <p class="mb-3">How likely are you to recommend Executive Dining Club to a friend or colleauge?</p> 
-                    </div>
-
-                    <div id="input6" style="display:none;">
-                        <p class="mb-3">6 of 6</p>
-                        <p class="mb-3">Any other comments? (optional)</p> 
-                    </div>
-
-                    <div id="thankYou" style="display:none;">
-                        <p class="mb-1">Thank you for your feedback!</p>
-                        <p class="mb-3">I hope to host you again.</p>
-                        <p>-Elliot</p> 
-                    </div>
-                                        
                     <form id="surveyInput1" method="POST" action="https://script.google.com/macros/s/AKfycbxeYP2YtTJlZkc8WArmyhTWnQHaMv2ydWaYZYeDHoUBgH9_24Og29DY6hxdmrl8sSIEXA/exec">
                         <div class="row">
                             <div class="col"><input class="radio-control" name="join-another" type="radio" value="Yes" required> Yes</input></div>
@@ -119,6 +93,16 @@
                         </div>
                     </form>
 
+                    <!-- 
+                        
+                        QUESTION 2
+                    
+                    -->
+                    <div id="input2" style="display:none;">
+                        <p class="mb-3">2 of 6</p>
+                        <p class="mb-3">Should we keep El Alma in our restaurant rotation?</p> 
+                    </div>
+                    
                     <form id="surveyInput2" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxeYP2YtTJlZkc8WArmyhTWnQHaMv2ydWaYZYeDHoUBgH9_24Og29DY6hxdmrl8sSIEXA/exec">
                         <div class="row">
                             <div class="col"><input class="radio-control" name="keep-restaurant" type="radio" value="Yes" required> Yes</input></div>
@@ -132,6 +116,16 @@
                             <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Next</button></div>
                         </div>
                     </form>
+
+                    <!-- 
+                        
+                        QUESTION 3
+                    
+                    -->
+                    <div id="input3" style="display:none;">
+                        <p class="mb-3">3 of 6</p>
+                        <p class="mb-3">Who is one person you'd want to see at another dinner?</p> 
+                    </div>
 
                     <form id="surveyInput3" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxeYP2YtTJlZkc8WArmyhTWnQHaMv2ydWaYZYeDHoUBgH9_24Og29DY6hxdmrl8sSIEXA/exec">                        
                         <div class="row">
@@ -148,6 +142,16 @@
                         </div>
                     </form>
 
+                    <!-- 
+                        
+                        QUESTION 4
+                    
+                    -->
+                    <div id="input4" style="display:none;">
+                        <p class="mb-3">4 of 6</p>
+                        <p class="mb-3">What's one restaurant we should add to our rotation?</p> 
+                    </div>
+
                     <form id="surveyInput4" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxeYP2YtTJlZkc8WArmyhTWnQHaMv2ydWaYZYeDHoUBgH9_24Og29DY6hxdmrl8sSIEXA/exec">                        
                         <div class="row">
                             <div class="col"><input class="form-control" name="new-restaurant" type="text" /></div>
@@ -158,6 +162,16 @@
                         </div>
                     </form>
 
+                    <!-- 
+                        
+                        QUESTION 5
+                    
+                    -->
+                    <div id="input5" style="display:none;">
+                        <p class="mb-3">5 of 6</p>
+                        <p class="mb-3">How likely are you to recommend Executive Dining Club to a friend or colleauge?</p> 
+                    </div>
+                    
                     <form id="surveyInput5" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxeYP2YtTJlZkc8WArmyhTWnQHaMv2ydWaYZYeDHoUBgH9_24Og29DY6hxdmrl8sSIEXA/exec">                        
                         <div class="row">
                             <div class="col">
@@ -182,6 +196,16 @@
                         </div>
                     </form>
 
+                    <!-- 
+                        
+                        QUESTION 6
+                    
+                    -->
+                    <div id="input6" style="display:none;">
+                        <p class="mb-3">6 of 6</p>
+                        <p class="mb-3">Any other comments? (optional)</p> 
+                    </div>
+
                     <form id="surveyInput6" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxeYP2YtTJlZkc8WArmyhTWnQHaMv2ydWaYZYeDHoUBgH9_24Og29DY6hxdmrl8sSIEXA/exec">                        
                         <div class="row">
                             <div class="col"><textarea class="form-control" name="comment"></textarea></div>
@@ -191,6 +215,17 @@
                             <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Submit</button></div>
                         </div>
                     </form>
+
+                    <!-- 
+                        
+                        THANK YOU
+                    
+                    -->
+                    <div id="thankYou" style="display:none;">
+                        <p class="mb-1">Thank you for your feedback!</p>
+                        <p class="mb-3">I hope to host you again.</p>
+                        <p>-Elliot</p> 
+                    </div>
                                                         
                 </div>
             </div>
@@ -233,12 +268,11 @@
             const action = e.target.action;            
             /*
             fetch(action, {
-            method: 'POST',
-            body: data,
+                method: 'POST',
+                body: data,
             })
             .then(() => {
-            //alert("Success!");
-            //location.href = 'confirmation.html';
+                //alert("Success!");
             })
             */
             
@@ -255,12 +289,11 @@
             const action = e.target.action;
             /*
             fetch(action, {
-            method: 'POST',
-            body: data,
+                method: 'POST',
+                body: data,
             })
             .then(() => {
-            //alert("Success!");
-            //location.href = 'confirmation.html';
+                //alert("Success!");
             })
             */
             
@@ -277,12 +310,11 @@
             const action = e.target.action;
             /*
             fetch(action, {
-            method: 'POST',
-            body: data,
+                method: 'POST',
+                body: data,
             })
             .then(() => {
-            //alert("Success!");
-            //location.href = 'confirmation.html';
+                //alert("Success!");
             })
             */
             
@@ -299,12 +331,11 @@
             const action = e.target.action;
             /*
             fetch(action, {
-            method: 'POST',
-            body: data,
+                method: 'POST',
+                body: data,
             })
             .then(() => {
-            //alert("Success!");
-            //location.href = 'confirmation.html';
+                //alert("Success!");
             })
             */
             
@@ -321,12 +352,11 @@
             const action = e.target.action;
             /*
             fetch(action, {
-            method: 'POST',
-            body: data,
+                method: 'POST',
+                body: data,
             })
             .then(() => {
-            //alert("Success!");
-            //location.href = 'confirmation.html';
+                //alert("Success!");
             })
             */
             
@@ -345,12 +375,12 @@
             location.href = 'survey-confirmation.html';
             /*
             fetch(action, {
-            method: 'POST',
-            body: data,
+                method: 'POST',
+                body: data,
             })
             .then(() => {
-            //alert("Success!");
-            location.href = 'survey-confirmation.html';
+                //alert("Success!");
+                location.href = 'survey-confirmation.html';
             })
             */
             
