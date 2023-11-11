@@ -70,6 +70,11 @@
                     <h1 class="fst-italic lh-1 mb-4">1 Minute Survey</h1>
                     
                     <!-- 
+                                HTML Form To Google Sheet
+                                https://github.com/levinunnink/html-form-to-google-sheet
+                    -->
+
+                    <!-- 
                         
                         QUESTION 1 
                     
@@ -79,13 +84,15 @@
                         <p class="mb-3">Do you want to join another dinner?</p> 
                     </div>
 
-                    <form id="surveyInput1" method="POST" action="https://script.google.com/macros/s/AKfycbxeYP2YtTJlZkc8WArmyhTWnQHaMv2ydWaYZYeDHoUBgH9_24Og29DY6hxdmrl8sSIEXA/exec">
+                    <form id="surveyInput1" method="POST" action="https://script.google.com/macros/s/AKfycbxsdb-cZl9mgWPKzBz1ZN3T_zYZoPieIW4e2zO0diuNb9fiKZflzSFGOmVP0yGF4XaF6g/exec">
+                        <input type="hidden" name="UserID" />
+
                         <div class="row">
-                            <div class="col"><input class="radio-control" name="join-another" type="radio" value="Yes" required> Yes</input></div>
+                            <div class="col"><input class="radio-control" name="JoinAnother" type="radio" value="Yes" required> Yes</input></div>
                         </div>    
 
                         <div class="row">                            
-                            <div class="col"><input class="radio-control" name="join-another" type="radio" value="No" required> No</input></div>
+                            <div class="col"><input class="radio-control" name="JoinAnother" type="radio" value="No" required> No</input></div>
                         </div>
                         
                         <div class="row input-group-newsletter mt-3">
@@ -103,13 +110,15 @@
                         <p class="mb-3">Should we keep El Alma in our restaurant rotation?</p> 
                     </div>
                     
-                    <form id="surveyInput2" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxeYP2YtTJlZkc8WArmyhTWnQHaMv2ydWaYZYeDHoUBgH9_24Og29DY6hxdmrl8sSIEXA/exec">
+                    <form id="surveyInput2" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxsdb-cZl9mgWPKzBz1ZN3T_zYZoPieIW4e2zO0diuNb9fiKZflzSFGOmVP0yGF4XaF6g/exec">
+                        <input type="hidden" name="UserID" />
+
                         <div class="row">
-                            <div class="col"><input class="radio-control" name="keep-restaurant" type="radio" value="Yes" required> Yes</input></div>
+                            <div class="col"><input class="radio-control" name="KeepRestaurant" type="radio" value="Yes" required> Yes</input></div>
                         </div>    
 
                         <div class="row">                            
-                            <div class="col"><input class="radio-control" name="keep-restaurant" type="radio" value="No" required> No</input></div>
+                            <div class="col"><input class="radio-control" name="KeepRestaurant" type="radio" value="No" required> No</input></div>
                         </div>
                         
                         <div class="row input-group-newsletter mt-3">
@@ -127,10 +136,12 @@
                         <p class="mb-3">Who is one person you'd want to see at another dinner?</p> 
                     </div>
 
-                    <form id="surveyInput3" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxeYP2YtTJlZkc8WArmyhTWnQHaMv2ydWaYZYeDHoUBgH9_24Og29DY6hxdmrl8sSIEXA/exec">                        
+                    <form id="surveyInput3" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxsdb-cZl9mgWPKzBz1ZN3T_zYZoPieIW4e2zO0diuNb9fiKZflzSFGOmVP0yGF4XaF6g/exec">                        
+                        <input type="hidden" name="UserID" />
+                        
                         <div class="row">
                             <div class="col">
-                                <select class="form-select" name="see-again">
+                                <select class="form-select" name="SeeAgain">
                                     <option value="">SELECT ONE</option>
                                     <option value="Aleksei">Aleksei</option>
                                 </select>
@@ -152,9 +163,11 @@
                         <p class="mb-3">What's one restaurant we should add to our rotation?</p> 
                     </div>
 
-                    <form id="surveyInput4" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxeYP2YtTJlZkc8WArmyhTWnQHaMv2ydWaYZYeDHoUBgH9_24Og29DY6hxdmrl8sSIEXA/exec">                        
+                    <form id="surveyInput4" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxsdb-cZl9mgWPKzBz1ZN3T_zYZoPieIW4e2zO0diuNb9fiKZflzSFGOmVP0yGF4XaF6g/exec">                        
+                        <input type="hidden" name="UserID" />
+                        
                         <div class="row">
-                            <div class="col"><input class="form-control" name="new-restaurant" type="text" /></div>
+                            <div class="col"><input class="form-control" name="NewRestaurant" type="text" /></div>
                         </div>    
                                                 
                         <div class="row input-group-newsletter mt-3">
@@ -172,10 +185,12 @@
                         <p class="mb-3">How likely are you to recommend Executive Dining Club to a friend or colleauge?</p> 
                     </div>
                     
-                    <form id="surveyInput5" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxeYP2YtTJlZkc8WArmyhTWnQHaMv2ydWaYZYeDHoUBgH9_24Og29DY6hxdmrl8sSIEXA/exec">                        
+                    <form id="surveyInput5" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxsdb-cZl9mgWPKzBz1ZN3T_zYZoPieIW4e2zO0diuNb9fiKZflzSFGOmVP0yGF4XaF6g/exec">                        
+                        <input type="hidden" name="UserID" />
+                        
                         <div class="row">
                             <div class="col">
-                                <select class="form-select" name="nps">
+                                <select class="form-select" name="NPS">
                                     <option value="-">Scale 1-10</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -206,9 +221,11 @@
                         <p class="mb-3">Any other comments? (optional)</p> 
                     </div>
 
-                    <form id="surveyInput6" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxeYP2YtTJlZkc8WArmyhTWnQHaMv2ydWaYZYeDHoUBgH9_24Og29DY6hxdmrl8sSIEXA/exec">                        
+                    <form id="surveyInput6" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxsdb-cZl9mgWPKzBz1ZN3T_zYZoPieIW4e2zO0diuNb9fiKZflzSFGOmVP0yGF4XaF6g/exec">                        
+                        <input type="hidden" name="UserID" />
+                        
                         <div class="row">
-                            <div class="col"><textarea class="form-control" name="comment"></textarea></div>
+                            <div class="col"><textarea class="form-control" name="Comment"></textarea></div>
                         </div>    
                                                 
                         <div class="row input-group-newsletter mt-3">
@@ -254,11 +271,21 @@
 </html>
 
 <script>
+    const userID = 2
+    document.getElementsByName('UserID')[0].value= userID;
+    document.getElementsByName('UserID')[1].value= userID;
+    document.getElementsByName('UserID')[2].value= userID;
+    document.getElementsByName('UserID')[3].value= userID;
+    document.getElementsByName('UserID')[4].value= userID;
+    document.getElementsByName('UserID')[5].value= userID;
+    
     window.addEventListener("load", function() {
         
         
+        
         const form = document.getElementById('surveyInput1');
-        form.addEventListener("submit", function(e) {        
+        form.addEventListener("submit", function(e) {                                
+            //document.getElementsByName('UserID')[0].value='2';
             e.preventDefault();
             form.style.display='none';
             document.getElementById('input1').style.display='none';  
@@ -266,7 +293,7 @@
             document.getElementById('surveyInput2').style.display='block';            
             const data = new FormData(form);
             const action = e.target.action;            
-            /*
+            //alert(form.UserID.value);
             fetch(action, {
                 method: 'POST',
                 body: data,
@@ -274,7 +301,7 @@
             .then(() => {
                 //alert("Success!");
             })
-            */
+            
             
         });
 
@@ -287,7 +314,6 @@
             document.getElementById('surveyInput3').style.display='block';          
             const data = new FormData(form2);
             const action = e.target.action;
-            /*
             fetch(action, {
                 method: 'POST',
                 body: data,
@@ -295,7 +321,6 @@
             .then(() => {
                 //alert("Success!");
             })
-            */
             
         });
 
@@ -307,8 +332,7 @@
             document.getElementById('input4').style.display='block';  
             document.getElementById('surveyInput4').style.display='block';          
             const data = new FormData(form3);
-            const action = e.target.action;
-            /*
+            const action = e.target.action;            
             fetch(action, {
                 method: 'POST',
                 body: data,
@@ -316,7 +340,6 @@
             .then(() => {
                 //alert("Success!");
             })
-            */
             
         });
 
@@ -329,7 +352,6 @@
             document.getElementById('surveyInput5').style.display='block';          
             const data = new FormData(form4);
             const action = e.target.action;
-            /*
             fetch(action, {
                 method: 'POST',
                 body: data,
@@ -337,7 +359,6 @@
             .then(() => {
                 //alert("Success!");
             })
-            */
             
         });
 
@@ -350,7 +371,6 @@
             document.getElementById('surveyInput6').style.display='block';          
             const data = new FormData(form5);
             const action = e.target.action;
-            /*
             fetch(action, {
                 method: 'POST',
                 body: data,
@@ -358,7 +378,6 @@
             .then(() => {
                 //alert("Success!");
             })
-            */
             
         });
 
@@ -371,9 +390,6 @@
             document.getElementById('thankYou').style.display='block';          
             const data = new FormData(form6);
             const action = e.target.action;
-
-            location.href = 'survey-confirmation.html';
-            /*
             fetch(action, {
                 method: 'POST',
                 body: data,
@@ -382,7 +398,6 @@
                 //alert("Success!");
                 location.href = 'survey-confirmation.html';
             })
-            */
             
         });
     });
