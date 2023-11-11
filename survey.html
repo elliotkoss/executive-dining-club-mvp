@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!--
+
+    GITHUB REPO
+    https://github.com/elliotkoss/executive-dining-club-mvp
+
+-->
+<html lang="en">
+    <head>
+
+        <meta name="robots" content="noindex">
+        
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-TXS6SF6M');
+        </script>
+        <!-- End Google Tag Manager -->
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="The Executive Dining Club organizes 8-person dinners in Austin, TX for business leaders to network, talk shop, and recruit. Join us!" />        
+
+        <meta property="og:title" content="Executive Dining Club - Austin Business Leader Dinners" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="assets/img/dinner-image-sm.jpeg" />
+        <meta property="og:url" content="https://executivediningclub.com" />
+        <meta property="og:description" content="The Executive Dining Club organizes 8-person dinners in Austin, TX for business leaders to network, talk shop, and recruit. Join us!" />
+
+        <title>Executive Dining Club - Austin Business Leader Dinners</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        
+        <!-- 
+            
+        Font Awesome icons (free version)
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        
+        Google fonts
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap" rel="stylesheet" />
+
+        -->
+
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXS6SF6M"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        <!-- Background Video-->
+        <img class="bg-image" src="assets/img/dinner-image-sm.webp" />        
+        <!--
+        <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg.mp4" type="video/mp4" /></video>
+        <img class="bg-image" src="assets/img/dinner-image.jpeg" />        
+        -->
+        <!-- Masthead-->
+        <div class="masthead">
+            <div class="masthead-content text-white">
+                <div class="container-fluid px-4 px-lg-0">
+                    <h1 class="fst-italic lh-1">1 Minute Survey</h1>
+                    <h3 class="mb-4">Executive Dining Club</h3>
+                    
+                    <!-- 
+                                HTML Form To Google Sheet
+                                https://github.com/levinunnink/html-form-to-google-sheet
+                    -->
+
+                    <!-- 
+                        
+                        QUESTION 1 
+                    
+                    -->
+                    <div id="input1">
+                        <p class="mb-3">1 of 6</p>
+                        <p class="mb-3">Do you want to join another dinner?</p> 
+                    </div>
+
+                    <form id="surveyInput1" method="POST" action="https://script.google.com/macros/s/AKfycbxsdb-cZl9mgWPKzBz1ZN3T_zYZoPieIW4e2zO0diuNb9fiKZflzSFGOmVP0yGF4XaF6g/exec">
+                        <input type="hidden" name="UserID" />
+
+                        <div class="row">
+                            <div class="col"><input class="radio-control" name="JoinAnother" type="radio" value="Yes" required> Yes</input></div>
+                        </div>    
+
+                        <div class="row">                            
+                            <div class="col"><input class="radio-control" name="JoinAnother" type="radio" value="No" required> No</input></div>
+                        </div>
+                        
+                        <div class="row input-group-newsletter mt-3">
+                            <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Next</button></div>
+                        </div>
+                    </form>
+
+                    <!-- 
+                        
+                        QUESTION 2
+                    
+                    -->
+                    <div id="input2" style="display:none;">
+                        <p class="mb-3">2 of 6</p>
+                        <p class="mb-3">Should we keep El Alma in our restaurant rotation?</p> 
+                    </div>
+                    
+                    <form id="surveyInput2" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxsdb-cZl9mgWPKzBz1ZN3T_zYZoPieIW4e2zO0diuNb9fiKZflzSFGOmVP0yGF4XaF6g/exec">
+                        <input type="hidden" name="UserID" />
+
+                        <div class="row">
+                            <div class="col"><input class="radio-control" name="KeepRestaurant" type="radio" value="Yes" required> Yes</input></div>
+                        </div>    
+
+                        <div class="row">                            
+                            <div class="col"><input class="radio-control" name="KeepRestaurant" type="radio" value="No" required> No</input></div>
+                        </div>
+                        
+                        <div class="row input-group-newsletter mt-3">
+                            <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Next</button></div>
+                        </div>
+                    </form>
+
+                    <!-- 
+                        
+                        QUESTION 3
+                    
+                    -->
+                    <div id="input3" style="display:none;">
+                        <p class="mb-3">3 of 6</p>
+                        <p class="mb-3">Who is one person you'd want to see at another dinner?</p> 
+                    </div>
+
+                    <form id="surveyInput3" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxsdb-cZl9mgWPKzBz1ZN3T_zYZoPieIW4e2zO0diuNb9fiKZflzSFGOmVP0yGF4XaF6g/exec">                        
+                        <input type="hidden" name="UserID" />
+                        
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-select" name="SeeAgain">
+                                    <option value="">SELECT ONE</option>
+                                    <option value="Aleksei">Aleksei</option>
+                                </select>
+                            </div>
+                        </div>    
+                                                
+                        <div class="row input-group-newsletter mt-3">
+                            <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Next</button></div>
+                        </div>
+                    </form>
+
+                    <!-- 
+                        
+                        QUESTION 4
+                    
+                    -->
+                    <div id="input4" style="display:none;">
+                        <p class="mb-3">4 of 6</p>
+                        <p class="mb-3">What's one restaurant we should add to our rotation?</p> 
+                    </div>
+
+                    <form id="surveyInput4" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxsdb-cZl9mgWPKzBz1ZN3T_zYZoPieIW4e2zO0diuNb9fiKZflzSFGOmVP0yGF4XaF6g/exec">                        
+                        <input type="hidden" name="UserID" />
+                        
+                        <div class="row">
+                            <div class="col"><input class="form-control" name="NewRestaurant" type="text" /></div>
+                        </div>    
+                                                
+                        <div class="row input-group-newsletter mt-3">
+                            <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Next</button></div>
+                        </div>
+                    </form>
+
+                    <!-- 
+                        
+                        QUESTION 5
+                    
+                    -->
+                    <div id="input5" style="display:none;">
+                        <p class="mb-3">5 of 6</p>
+                        <p class="mb-3">How likely are you to recommend Executive Dining Club to a friend or colleauge?</p> 
+                    </div>
+                    
+                    <form id="surveyInput5" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxsdb-cZl9mgWPKzBz1ZN3T_zYZoPieIW4e2zO0diuNb9fiKZflzSFGOmVP0yGF4XaF6g/exec">                        
+                        <input type="hidden" name="UserID" />
+                        
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-select" name="NPS">
+                                    <option value="-">Scale 1-10</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>    
+                                                
+                        <div class="row input-group-newsletter mt-3">
+                            <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Next</button></div>
+                        </div>
+                    </form>
+
+                    <!-- 
+                        
+                        QUESTION 6
+                    
+                    -->
+                    <div id="input6" style="display:none;">
+                        <p class="mb-3">6 of 6</p>
+                        <p class="mb-3">Any other comments? (optional)</p> 
+                    </div>
+
+                    <form id="surveyInput6" style="display:none;" method="POST" action="https://script.google.com/macros/s/AKfycbxsdb-cZl9mgWPKzBz1ZN3T_zYZoPieIW4e2zO0diuNb9fiKZflzSFGOmVP0yGF4XaF6g/exec">                        
+                        <input type="hidden" name="UserID" />
+                        
+                        <div class="row">
+                            <div class="col"><textarea class="form-control" name="Comment"></textarea></div>
+                        </div>    
+                                                
+                        <div class="row input-group-newsletter mt-3">
+                            <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Submit</button></div>
+                        </div>
+                    </form>
+
+                    <!-- 
+                        
+                        THANK YOU
+                    
+                    -->
+                    <div id="thankYou" style="display:none;">
+                        <p class="mb-1">Thank you for your feedback!</p>
+                        <p class="mb-3">I hope to host you again.</p>
+                        <p>-Elliot</p> 
+                    </div>
+                                                        
+                </div>
+            </div>
+        </div>        
+        <!-- Social Icons-->
+        <!-- For more icon options, visit https://fontawesome.com/icons?d=gallery&p=2&s=brands-->
+        <!--
+        <div class="social-icons">
+            <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
+                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        -->
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
+
+<script>
+    var userID = 0;
+
+    const url = window.location.toString();
+    var querystring = url.split("?");
+    if (querystring.length > 1) {
+      var pairs = querystring[1].split("&");
+      for (i in pairs) {
+        var keyval = pairs[i].split("=");
+        if ( keyval[0] == 'userID' ) {
+            userID = keyval[1];
+        }        
+      }
+    }
+
+    document.getElementsByName('UserID')[0].value= userID;
+    document.getElementsByName('UserID')[1].value= userID;
+    document.getElementsByName('UserID')[2].value= userID;
+    document.getElementsByName('UserID')[3].value= userID;
+    document.getElementsByName('UserID')[4].value= userID;
+    document.getElementsByName('UserID')[5].value= userID;
+    
+    window.addEventListener("load", function() {
+        
+        
+        
+        const form = document.getElementById('surveyInput1');
+        form.addEventListener("submit", function(e) {                                
+            //document.getElementsByName('UserID')[0].value='2';
+            e.preventDefault();
+            form.style.display='none';
+            document.getElementById('input1').style.display='none';  
+            document.getElementById('input2').style.display='block';  
+            document.getElementById('surveyInput2').style.display='block';            
+            const data = new FormData(form);
+            const action = e.target.action;            
+            //alert(form.UserID.value);
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+            .then(() => {
+                //alert("Success!");
+            })
+            
+            
+        });
+
+        const form2 = document.getElementById('surveyInput2');
+        form2.addEventListener("submit", function(e) {        
+            e.preventDefault();
+            form2.style.display='none';
+            document.getElementById('input2').style.display='none';  
+            document.getElementById('input3').style.display='block';  
+            document.getElementById('surveyInput3').style.display='block';          
+            const data = new FormData(form2);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+            .then(() => {
+                //alert("Success!");
+            })
+            
+        });
+
+        const form3 = document.getElementById('surveyInput3');
+        form3.addEventListener("submit", function(e) {        
+            e.preventDefault();
+            form3.style.display='none';
+            document.getElementById('input3').style.display='none';  
+            document.getElementById('input4').style.display='block';  
+            document.getElementById('surveyInput4').style.display='block';          
+            const data = new FormData(form3);
+            const action = e.target.action;            
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+            .then(() => {
+                //alert("Success!");
+            })
+            
+        });
+
+        const form4 = document.getElementById('surveyInput4');
+        form4.addEventListener("submit", function(e) {        
+            e.preventDefault();
+            form4.style.display='none';
+            document.getElementById('input4').style.display='none';  
+            document.getElementById('input5').style.display='block';  
+            document.getElementById('surveyInput5').style.display='block';          
+            const data = new FormData(form4);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+            .then(() => {
+                //alert("Success!");
+            })
+            
+        });
+
+        const form5 = document.getElementById('surveyInput5');
+        form5.addEventListener("submit", function(e) {        
+            e.preventDefault();
+            form5.style.display='none';
+            document.getElementById('input5').style.display='none';  
+            document.getElementById('input6').style.display='block';  
+            document.getElementById('surveyInput6').style.display='block';          
+            const data = new FormData(form5);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+            .then(() => {
+                //alert("Success!");
+            })
+            
+        });
+
+        const form6 = document.getElementById('surveyInput6');
+        form6.addEventListener("submit", function(e) {        
+            e.preventDefault();
+            form6.style.display='none';
+            document.getElementById('input6').style.display='none';  
+            document.getElementById('thankYou').style.display='block';  
+            document.getElementById('thankYou').style.display='block';          
+            const data = new FormData(form6);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+            .then(() => {
+                //alert("Success!");
+                location.href = 'survey-confirmation.html';
+            })
+            
+        });
+    });
+</script>

@@ -8,6 +8,8 @@
 <html lang="en">
     <head>
 
+        <meta name="robots" content="noindex">
+        
         <!-- Google Tag Manager -->
         <script>
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -65,25 +67,14 @@
         <div class="masthead">
             <div class="masthead-content text-white">
                 <div class="container-fluid px-4 px-lg-0">
-                    <h1 class="fst-italic lh-1 mb-4">Executive Dining Club</h1>
-                    <p id="contactFormText" class="mb-5">We organize 8-person dinners in Austin, TX for business leaders to network, talk shop, and recruit. Join us!</p>                    
-                                        
-                    <form id="contactForm" method="POST" action="https://script.google.com/macros/s/AKfycbwtV9rhPxVIb5HfKRxMDktsN8aGh0HDs783d8E0UNMsNrsQuMBAXw6ud9xpFdHKDLD0cQ/exec">
-                        <!-- 
-                            Email address input
-                            https://github.com/levinunnink/html-form-to-google-sheet
-                        -->
-                        <div class="row input-group-newsletter">
-                            <div class="col"><input class="form-control" name="Email" type="email" placeholder="Email" aria-label="Email" /></div>
-                            <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Submit</button></div>
-                        </div>                            
-                    </form>                    
+                    <h1 class="fst-italic lh-1 mb-4">1 Minute Survey</h1>                                        
 
-                    <!--
-                        <p id="submitInfo" style="display:none;">Submitting email...</p> 
-                    -->
-                    
-                    <p class="mb-5" id="submitInfo" style="display:none;">Email received.<br /><br />Be on the lookout for an invite to our next dinner. And feel free to invite your colleagues and friends to make each dinner better than the last.<br /><br /><a href="index.html">Submit another email</a></p>                 
+                    <div id="thankYou">
+                        <p class="mb-1">Thank you for your feedback!</p>
+                        <p class="mb-3">I hope to host you again.</p>
+                        <p>-Elliot</p> 
+                    </div>                                                            
+                                                        
                 </div>
             </div>
         </div>        
@@ -109,25 +100,3 @@
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
-
-<script>
-    window.addEventListener("load", function() {
-        const form = document.getElementById('contactForm');
-        form.addEventListener("submit", function(e) {        
-            form.style.display='none';
-            document.getElementById('contactFormText').style.display='none';
-            document.getElementById('submitInfo').style.display='block';
-            e.preventDefault();
-            const data = new FormData(form);
-            const action = e.target.action;
-            fetch(action, {
-            method: 'POST',
-            body: data,
-            })
-            .then(() => {
-            //alert("Success!");
-            location.href = 'confirmation.html';
-            })
-        });
-    });
-</script>
