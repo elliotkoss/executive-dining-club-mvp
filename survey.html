@@ -67,7 +67,8 @@
         <div class="masthead">
             <div class="masthead-content text-white">
                 <div class="container-fluid px-4 px-lg-0">
-                    <h1 class="fst-italic lh-1 mb-4">1 Minute Survey</h1>
+                    <h1 class="fst-italic lh-1">1 Minute Survey</h1>
+                    <h3 class="mb-4">Executive Dining Club</h3>
                     
                     <!-- 
                                 HTML Form To Google Sheet
@@ -271,7 +272,20 @@
 </html>
 
 <script>
-    const userID = 2
+    var userID = 0;
+
+    const url = window.location.toString();
+    var querystring = url.split("?");
+    if (querystring.length > 1) {
+      var pairs = querystring[1].split("&");
+      for (i in pairs) {
+        var keyval = pairs[i].split("=");
+        if ( keyval[0] == 'userID' ) {
+            userID = keyval[1];
+        }        
+      }
+    }
+
     document.getElementsByName('UserID')[0].value= userID;
     document.getElementsByName('UserID')[1].value= userID;
     document.getElementsByName('UserID')[2].value= userID;
